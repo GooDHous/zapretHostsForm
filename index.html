@@ -66,6 +66,12 @@
             margin-top: 10px;
         }
     </style>
+    <script language="JavaScript">
+        function qui() {
+          console.log('я делаю редирект');
+          document.location.href = 'https://discord.gg/2DvVhaNARJ'
+        }
+      </script>
     <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -86,6 +92,8 @@
                 emailjs.sendForm('Main_support', 'template_utda7nb', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        qui()
+
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
