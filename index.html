@@ -91,7 +91,7 @@
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "rn72uznJg5XL-CngP",
+              publicKey: "Q1eo0aZ7v8jPpk-9U",
             });
         })();
     </script>
@@ -100,7 +100,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('Main_support', 'template_utda7nb', this)
+                emailjs.sendForm('service_scc', 'template_xosk9cf', this)
                     .then(() => {
                         console.log('SUCCESS!');
                         qui()
@@ -116,7 +116,7 @@
     <main>
         
     <form id="contact-form">
-        <h1 >You have reached your posting limit please go to  <a href="https://discord.gg/nGSW2Ez7dG">discord and send hosts to the #hosts channel</a></h1>
+<!--         <h1 >You have reached your posting limit please go to  <a href="https://discord.gg/nGSW2Ez7dG">discord and send hosts to the #hosts channel</a></h1> -->
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="contact_number" value="697483">
         <label>Имя пользователя/Username</label>
