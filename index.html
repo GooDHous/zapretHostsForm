@@ -11,7 +11,6 @@
     <meta property="og:description" content="Здесь вы можете предложить хост (URL, адрес) в общий список откуда они будут автоматически добавлены в локальный список при обновлении программы" />
     <meta property="og:title" content="Добавьте ваши хосты в общий список" />
     <meta property="og:image" content="https://raw.githubusercontent.com/GooDHous/yorkwillimgrepo/refs/heads/main/3.png" />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <style>
         body{
         min-height: 100vh;
@@ -51,7 +50,7 @@
             color: black;
         }
         .hrefLeft{
-            
+
             background-color: rgb(25, 212, 236);
             padding-left: 50px;
             padding-right: 50px;
@@ -62,7 +61,7 @@
             color: black;
         }
         .hrefCent{
-            
+
             background-color: rgb(25, 212, 236);
             padding-left: 50px;
             padding-right: 50px;
@@ -77,41 +76,65 @@
         iframe{
             margin-top: 20px;
         }
-        
     </style>
-                        <script language="JavaScript">
-                        Email.send({
-                        SecureToken : "e22cb8fe-91b2-4d25-a0be-4f752280ed0c",
-                        To : 'vehovicveh@gmail.com',
-                        From : "smtpzapret@elasticemail.com",
-                        Subject : document.getElementById("subject"),
-                        Body : document.getElementById("bodyg")})
-                        .then(message => alert(message));
-                  </script>
+    <script language="JavaScript">
+        function qui() {
+          console.log('я делаю редирект');
+          document.location.href = 'https://discord.gg/2DvVhaNARJ'
+        }
+      </script>
+    <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "Q1eo0aZ7v8jPpk-9U",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_scc', 'template_g6hqj79', this)
+                emailjs.sendForm('service_scc', 'TMP', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        qui()
 
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <main>
-        
+
     <form id="contact-form">
-        <h1 >You have reached your posting limit please go to  <a href="https://discord.gg/nGSW2Ez7dG">discord and send hosts to the #hosts channel</a></h1>
+<!--         <h1 >You have reached your posting limit please go to  <a href="https://discord.gg/nGSW2Ez7dG">discord and send hosts to the #hosts channel</a></h1> -->
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="contact_number" value="697483">
         <label>Имя пользователя/Username</label>
         <p>Необязательно / Optional</p>
-        <input type="text" name="Subject"value="">
-        <input type="email" hidden name="email" value="vehovicveh@gmail.com">
+        <input type="text" name="user_name"value="">
+        <input type="email" hidden name="user_email" value="vehovicveh@gmail.com">
         <label>Хост на добавление / Host to add</label>
         <p>Обязательно / required</p>
-        <textarea name="message" required id="body"></textarea>
-        <input type="submit" onclick="Email.send()" value="Отправить">
+        <textarea name="message" required></textarea>
+        <input type="submit" value="Отправить">
         <a href="https://github.com/GooDHous/HostsList/blob/main/hosts.txt" class="hrefCent">HostsList</a>
         <a href="https://github.com/GooDHous/Zapret-build" class="hrefMain">Github</a>
         <!-- <a href="https://discord.gg/2DvVhaNARJ" class="hrefLeft">Discord</a> -->
         <iframe src="https://discord.com/widget?id=1306248001811124316&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </form>
-   
-    
+
+
 
 </main>
 </body>
