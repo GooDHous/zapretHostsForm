@@ -1,4 +1,4 @@
-var runned = false
+var runned = true
 var input = document.getElementById("myInput");
 var keys = [
   'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpuMm5yVlFXdFprRDhEclBjN3ZFY0JtQlgzd2RwRmQxUkh3ZDJpTHNZUGRLVkVoQXB5VVRFQVNZZkdKWHc5V2lHVlZWMVZOQTkxcXVRekxncFBRc2s2RzNKTTM3Q0RTQWM=@download.woodyxander.pictures:41454/?outline=1&prefix=%16%03%01%00%C2%A8%01%01#016%20%D0%AD%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%91%D0%B0%D1%82%D0%BB%D0%B5%D1%80',
